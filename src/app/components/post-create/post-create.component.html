@@ -1,0 +1,17 @@
+<div *ngIf="submitted">
+  <h4>Data was submitted successfully!</h4>
+</div>
+<form id="formAdd" class="form-default">
+  <input class="square-input-field"
+         name="title"
+         type="text"
+         [(ngModel)]="post.title"
+  />
+  <br/>
+  <textarea class="square-input-field"
+            name="body"
+            [(ngModel)]="post.body"
+  ></textarea>
+  <br/>
+  <button type="submit" (click)="savePost()">Save</button>
+</form>
